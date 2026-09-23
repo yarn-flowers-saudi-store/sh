@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers Shemo | صنع بحب 🌸</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosepink: {
+                            50: '#FFF0F5',
+                            100: '#FFE4EC',
+                            200: '#FFB8D2',
+                            300: '#FF85B3',
+                            400: '#FF4D91',
+                            500: '#EC1367',
+                            600: '#D20050',
+                            700: '#A8003E',
+                            800: '#7E002F',
+                            900: '#54001F',
+                        },
+                        creamgold: '#FDF7EE',
+                        goldaccent: '#D4AF37'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Tajawal', 'Cairo', sans-serif;
+            background-image: url('photo_2026-09-23_14-35-51.jpg');
+            background-repeat: repeat;
+            background-size: 300px;
+            background-color: #FFF0F5;
+            color: #331A24;
+        }
+        .pink-gradient {
+            background: linear-gradient(135deg, #EC1367 0%, #FF4D91 50%, #FF85B3 100%);
+        }
+        .soft-pink-bg {
+            background: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-rosepink-500 selection:text-white min-h-screen flex flex-col">
+
+    <!-- Top Announcement Bar -->
+    <div class="pink-gradient text-white text-xs sm:text-sm py-2 px-4 text-center font-bold flex items-center justify-center gap-2 shadow-sm">
+        <span class="bg-white/20 px-2 py-0.5 rounded-full text-[11px]">عروض الموسم 🌸</span>
+        <span>توصيل لكافة مدن المملكة العربية السعودية 🇸🇦 (شحن مجاني للطلبات أكثر من 200 ر.س)</span>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-rosepink-100 shadow-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-2xl overflow-hidden border-2 border-rosepink-200 shadow-md group-hover:rotate-6 transition-transform">
+                        <img src="photo_2026-09-23_14-35-10.jpg" alt="Flowers Shemo Logo" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <span class="text-xl font-black text-rosepink-600 tracking-tight block font-cairo">Flowers <span class="text-rosepink-900">Shemo</span></span>
+                        <span class="text-[10px] text-rosepink-400 font-bold block tracking-widest uppercase">KSA Handmade</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links (Desktop) -->
+                <nav class="hidden md:flex items-center gap-8 font-bold text-sm text-rosepink-900">
+                    <a href="index.html" class="hover:text-rosepink-500 transition-colors">الرئيسية</a>
+                    <a href="products.html" class="hover:text-rosepink-500 transition-colors">المنتجات</a>
+                    <a href="#features" class="hover:text-rosepink-500 transition-colors">مميزاتنا</a>
+                    <a href="#reviews" class="hover:text-rosepink-500 transition-colors">آراء العملاء</a>
+                    <a href="#custom-order" class="text-rosepink-600 font-extrabold bg-rosepink-50 px-3 py-1.5 rounded-xl border border-rosepink-200 hover:bg-rosepink-100 transition-all">طلب خاص ✨</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="flex items-center gap-3">
+                    <div class="hidden sm:flex items-center gap-1 px-3 py-1 bg-rosepink-50 text-rosepink-700 text-xs font-bold rounded-full border border-rosepink-200">
+                        <span>السعودية</span>
+                        <span>🇸🇦</span>
+                    </div>
+                    <a href="products.html" class="relative p-2.5 pink-gradient text-white rounded-2xl shadow-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2 px-4">
+                        <i class="fa-solid fa-basket-shopping text-lg"></i>
+                        <span class="font-bold text-sm hidden sm:inline">السلة / المنتجات</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative py-12 lg:py-20 overflow-hidden soft-pink-bg my-6 mx-4 sm:mx-8 rounded-3xl shadow-xl border border-rosepink-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Hero Text -->
+                <div class="space-y-6 text-right">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white text-rosepink-600 font-bold rounded-full text-xs shadow-sm border border-rosepink-200">
+                        <i class="fa-solid fa-heart text-rosepink-500"></i>
+                        <span> Flowers Shemo | شغف يدوي وصنع بحب 🇸🇦 </span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-rosepink-900 leading-tight font-cairo">
+                        ورد دائم.. <br>
+                        <span class="text-rosepink-500">وذكريات تدوم للأبد ✨</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-700 leading-relaxed font-tajawal">
+                        أهلاً بكِ في متجر Flowers Shemo نصنع ورودنا يدويًا بكل حب واهتمام، ورود تدوم لتكون هدية جميلة تعبّر عن مشاعرك، وتبقى ذكرى لاتُنسى لمن تحبين. كل وردة تُصنع خصيصًا لكِ!
+                    </p>
+
+                    <!-- CTA Buttons (زر تسوقي التشكيلة الآن يحولك لصفحة المنتجات) -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="products.html" class="px-8 py-4 pink-gradient text-white font-bold rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center gap-2 text-sm sm:text-base">
+                            <span>تسوقي التشكيلة الآن</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                        <a href="#custom-order" class="px-6 py-4 bg-white text-rosepink-700 border-2 border-rosepink-200 hover:bg-rosepink-50 font-bold rounded-2xl transition-all flex items-center gap-2 text-sm sm:text-base">
+                            <i class="fa-solid fa-wand-magic-sparkles text-rosepink-500"></i>
+                            <span>صممي بوكيهك الخاص</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image Graphic -->
+                <div class="relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="bg-white p-4 rounded-3xl shadow-2xl border-4 border-rosepink-100 space-y-4">
+                            <div class="aspect-square bg-rosepink-50 rounded-2xl overflow-hidden relative flex items-center justify-center">
+                                <img src="photo_2026-09-23_14-35-10.jpg" alt="Flowers Shemo" class="w-full h-full object-cover rounded-xl">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order Section -->
+    <section id="custom-order" class="py-16 soft-pink-bg my-6 mx-4 sm:mx-8 rounded-3xl shadow-lg border border-rosepink-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border-2 border-rosepink-200 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                <div class="lg:col-span-2 space-y-4 text-right">
+                    <span class="bg-rosepink-500 text-white font-bold text-xs px-3 py-1 rounded-full">طلب خاص وحصري ✨</span>
+                    <h2 class="text-2xl sm:text-4xl font-black text-rosepink-900 font-cairo">حاب تصميم أو لون ورد معّين ببالك؟</h2>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        نصمم لكِ البوكيه بالألوان والأعداد المقربة لقلبكِ! اختاري نوع الورد (توليب، جوري، عباد شمس، لافندر) مع إضافة اسم أو كرت إهداء خاص للتقديم.
+                    </p>
+                    <div class="pt-2">
+                        <a href="https://wa.me/966500000000?text=مرحباً%20متجر%20Flowers%20Shemo%20🌸%20حاب%20استفسر%20عن%20طلب%20تصميم%20خاص" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-2xl shadow-md transition-all text-sm sm:text-base">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>توصيل طلبك المباشر عبر الواتساب</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-rosepink-50 p-6 rounded-2xl border border-rosepink-200 text-center space-y-3">
+                    <div class="w-14 h-14 bg-white text-rosepink-500 rounded-full flex items-center justify-center text-2xl mx-auto shadow-sm">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-bold text-rosepink-900">حياكِ الله باختيارك</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">يتم تجهيز كافة الطلبات اليدوية الخاصة خلال 2 إلى 4 أيام عمل بكل دقة وإتقان.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Features Section -->
+    <section id="features" class="py-16 bg-white/95 backdrop-blur-md my-6 mx-4 sm:mx-8 rounded-3xl shadow-lg border border-rosepink-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-rosepink-50/60 rounded-3xl border border-rosepink-100 text-center space-y-3">
+                    <div class="w-14 h-14 pink-gradient text-white rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
+                        <i class="fa-solid fa-heart text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-rosepink-900 font-cairo">خيوط جودة فائقة</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">نستخدم أجود خيوط القطن الناعمة التي تحافظ على رونقها وألوانها الوردية الزاهية.</p>
+                </div>
+                <div class="p-6 bg-rosepink-50/60 rounded-3xl border border-rosepink-100 text-center space-y-3">
+                    <div class="w-14 h-14 pink-gradient text-white rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
+                        <i class="fa-solid fa-truck-fast text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-rosepink-900 font-cairo">توصيل سريع للمملكة 🇸🇦</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">نوصّل لكل مدن المملكة (الرياض، جدة، مكة، الشرقية، وباقي المناطق) بتغليف آمن ومحكم.</p>
+                </div>
+                <div class="p-6 bg-rosepink-50/60 rounded-3xl border border-rosepink-100 text-center space-y-3">
+                    <div class="w-14 h-14 pink-gradient text-white rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
+                        <i class="fa-solid fa-ribbon text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-rosepink-900 font-cairo">تغليف إهداء راقي</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed">يصلك البوكيه بتغليف فاخر وجاهز للإهداء مباشرة مع كرت عبارات مجاني.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rosepink-900 text-white py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl overflow-hidden border border-white/30">
+                            <img src="photo_2026-09-23_14-35-10.jpg" alt="Logo" class="w-full h-full object-cover">
+                        </div>
+                        <span class="text-xl font-black font-cairo">Flowers Shemo 🇸🇦</span>
+                    </div>
+                    <p class="text-xs text-rosepink-100/80 leading-relaxed">
+                        علامة تجارية متخصصة بصناعة الورد والديكورات من الخيوط اليدوية. صُنعت بكل حب لتزين مناسباتكم.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-rosepink-200 mb-3 font-cairo">روابط سريعة</h4>
+                    <ul class="space-y-2 text-xs text-rosepink-100">
+                        <li><a href="index.html" class="hover:underline">الرئيسية</a></li>
+                        <li><a href="products.html" class="hover:underline">تصفح المنتجات</a></li>
+                        <li><a href="index.html#custom-order" class="hover:underline">طلب تصميم خاص</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-rosepink-200 mb-3 font-cairo">خدمة العملاء</h4>
+                    <ul class="space-y-2 text-xs text-rosepink-100">
+                        <li>• الشحن بكافة مدن المملكة 🇸🇦</li>
+                        <li>• الدفع عبر مدى و Apple Pay</li>
+                        <li>• تغليف إهداء مجاني لكل الطلبات</li>
+                        <li>• توصيل للباب خلال 2-4 أيام</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-sm text-rosepink-200 mb-3 font-cairo">تواصل معنا</h4>
+                    <div class="flex gap-3 mb-4">
+                        <a href="https://wa.me/966500000000" target="_blank" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-green-500 transition-all flex items-center justify-center text-sm"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-rosepink-600 transition-all flex items-center justify-center text-sm"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-rosepink-600 transition-all flex items-center justify-center text-sm"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <p class="text-[10px] text-rosepink-300">جميع الحقوق محفوظة &copy; 2026 - Flowers Shemo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
