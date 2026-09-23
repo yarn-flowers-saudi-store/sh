@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ورد وخيط | متجر الورد والديكورات اليدوية بالسعودية 🇸🇦</title>
+    <title>Flowers Shemo | متجر الورد والديكورات اليدوية بالسعودية 🇸🇦</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -24,7 +24,7 @@
                             200: '#FFB8D2',
                             300: '#FF85B3',
                             400: '#FF4D91',
-                            500: '#EC1367', // Main vibrant pink
+                            500: '#EC1367',
                             600: '#D20050',
                             700: '#A8003E',
                             800: '#7E002F',
@@ -45,6 +45,10 @@
     <style>
         body {
             font-family: 'Tajawal', 'Cairo', sans-serif;
+            /* استخدام الصورة السادة كخلفية للمتجر مع تكرار هادئ */
+            background-image: url('photo_2026-09-23_14-35-51.jpg');
+            background-repeat: repeat;
+            background-size: 300px;
             background-color: #FFF0F5;
             color: #331A24;
         }
@@ -52,7 +56,7 @@
             background: linear-gradient(135deg, #EC1367 0%, #FF4D91 50%, #FF85B3 100%);
         }
         .soft-pink-bg {
-            background: linear-gradient(180deg, #FFFFFF 0%, #FFF0F5 100%);
+            background: rgba(255, 255, 255, 0.9);
         }
         .badge-glow {
             box-shadow: 0 0 15px rgba(236, 19, 103, 0.4);
@@ -86,14 +90,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- Logo -->
+                <!-- Logo (صورة البنت مع الورد) -->
                 <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 rounded-2xl pink-gradient flex items-center justify-center text-white text-2xl shadow-md group-hover:rotate-6 transition-transform">
-                        <i class="fa-solid fa-spa"></i>
+                    <div class="w-12 h-12 rounded-2xl overflow-hidden border-2 border-rosepink-200 shadow-md group-hover:rotate-6 transition-transform">
+                        <img src="photo_2026-09-23_14-35-10.jpg" alt="Flowers Shemo Logo" class="w-full h-full object-cover">
                     </div>
                     <div>
-                        <span class="text-2xl font-black text-rosepink-600 tracking-tight block font-cairo">ورد وخيط</span>
-                        <span class="text-[10px] text-rosepink-400 font-bold block tracking-widest uppercase">Rose & Thread KSA</span>
+                        <span class="text-xl font-black text-rosepink-600 tracking-tight block font-cairo">Flowers <span class="text-rosepink-900">Shemo</span></span>
+                        <span class="text-[10px] text-rosepink-400 font-bold block tracking-widest uppercase">KSA Handmade</span>
                     </div>
                 </a>
 
@@ -108,8 +112,6 @@
 
                 <!-- Header Actions -->
                 <div class="flex items-center gap-3">
-                    
-                    <!-- KSA Badge -->
                     <div class="hidden sm:flex items-center gap-1 px-3 py-1 bg-rosepink-50 text-rosepink-700 text-xs font-bold rounded-full border border-rosepink-200">
                         <span>السعودية</span>
                         <span>🇸🇦</span>
@@ -141,7 +143,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative py-12 lg:py-20 overflow-hidden soft-pink-bg">
+    <section id="home" class="relative py-12 lg:py-20 overflow-hidden soft-pink-bg my-6 mx-4 sm:mx-8 rounded-3xl shadow-xl border border-rosepink-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
@@ -149,16 +151,16 @@
                 <div class="space-y-6 text-right">
                     <div class="inline-flex items-center gap-2 px-4 py-2 bg-white text-rosepink-600 font-bold rounded-full text-xs shadow-sm border border-rosepink-200">
                         <i class="fa-solid fa-heart text-rosepink-500"></i>
-                        <span>شغف يدوي وصنع بحب بأيدي سعودية 🇸🇦</span>
+                        <span> Flowers Shemo | شغف يدوي وصنع بحب 🇸🇦 </span>
                     </div>
 
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-rosepink-900 leading-tight font-cairo">
-                        ورد لا يذبل.. <br>
+                        ورد دائم.. <br>
                         <span class="text-rosepink-500">وذكريات تدوم للأبد ✨</span>
                     </h1>
 
-                    <p class="text-base sm:text-lg text-gray-600 leading-relaxed font-tajawal">
-                        أهلاً بكِ في عالم "ورد وخيط"، نحول خيوط القطن الناعمة إلى بوكيهات ورد وديكورات أنيقة تزيد منزلكِ جمالاً وتبقى ذكرى خالدة لا تتأثر بالزمن.
+                    <p class="text-base sm:text-lg text-gray-700 leading-relaxed font-tajawal">
+                        أهلاً بكِ في متجر Flowers Shemo للورد والديكورات اليدوية، نحول خيوط القطن الناعمة إلى بوكيهات ورد وديكورات أنيقة تزيد منزلكِ جمالاً وتبقى ذكرى خالدة لا تتأثر بالزمن.
                     </p>
 
                     <!-- CTA Buttons -->
@@ -172,60 +174,14 @@
                             <span>صممي بوكيهك الخاص</span>
                         </a>
                     </div>
-
-                    <!-- Payment Badges -->
-                    <div class="pt-6 border-t border-rosepink-200/60 flex flex-wrap items-center gap-3 text-xs font-bold text-gray-500">
-                        <span>خيارات الدفع المتاحة بالمملكة:</span>
-                        <div class="flex items-center gap-2 text-gray-700 font-black">
-                            <span class="bg-white px-2.5 py-1 rounded-md border border-gray-200 shadow-xs">مدى</span>
-                            <span class="bg-white px-2.5 py-1 rounded-md border border-gray-200 shadow-xs">Apple Pay</span>
-                            <span class="bg-white px-2.5 py-1 text-rosepink-600 rounded-md border border-rosepink-200 shadow-xs">تمارا</span>
-                            <span class="bg-white px-2.5 py-1 text-teal-600 rounded-md border border-teal-200 shadow-xs">stc pay</span>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- Hero Graphic Illustration / Card -->
+                <!-- Hero Image Graphic -->
                 <div class="relative">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <div class="bg-white p-6 rounded-3xl shadow-2xl border-4 border-rosepink-100 space-y-4">
+                        <div class="bg-white p-4 rounded-3xl shadow-2xl border-4 border-rosepink-100 space-y-4">
                             <div class="aspect-square bg-rosepink-50 rounded-2xl overflow-hidden relative flex items-center justify-center">
-                                <!-- Creative SVG Flower Art Placeholder -->
-                                <svg class="w-4/5 h-4/5 text-rosepink-400 animate-pulse" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M100 130V180" stroke="#4C7C59" stroke-width="8" stroke-linecap="round"/>
-                                    <path d="M100 150C80 140 60 145 50 160" stroke="#4C7C59" stroke-width="6" stroke-linecap="round"/>
-                                    <path d="M100 160C120 150 140 155 150 170" stroke="#4C7C59" stroke-width="6" stroke-linecap="round"/>
-                                    <circle cx="100" cy="80" r="28" fill="#EC1367"/>
-                                    <circle cx="70" cy="80" r="22" fill="#FF4D91" opacity="0.9"/>
-                                    <circle cx="130" cy="80" r="22" fill="#FF4D91" opacity="0.9"/>
-                                    <circle cx="100" cy="50" r="22" fill="#FF85B3" opacity="0.9"/>
-                                    <circle cx="100" cy="110" r="22" fill="#FF85B3" opacity="0.9"/>
-                                    <circle cx="100" cy="80" r="14" fill="#FFD1E3"/>
-                                </svg>
-                                <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl text-xs font-extrabold text-rosepink-700 shadow-sm border border-rosepink-200">
-                                    🌸 شغل كروشيه يدوّي 100%
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between pt-2">
-                                <div>
-                                    <h3 class="font-bold text-rosepink-900 text-sm">بوكيه ورد التوليب الوردية</h3>
-                                    <p class="text-xs text-gray-500">7 وردات ملفوفة بتغليف هدايا فاخر</p>
-                                </div>
-                                <div class="text-left">
-                                    <span class="text-lg font-black text-rosepink-600">140</span>
-                                    <span class="text-xs font-bold text-rosepink-900">ر.س</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Floating Badges -->
-                        <div class="absolute -top-6 -left-6 bg-white p-3.5 rounded-2xl shadow-xl border border-rosepink-200 flex items-center gap-3">
-                            <div class="w-9 h-9 rounded-xl bg-rosepink-100 text-rosepink-600 flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-gift"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs font-bold text-rosepink-900">تغليف كرت إهداء</p>
-                                <p class="text-[10px] text-gray-500">مجاني مع كل طلب 💌</p>
+                                <img src="photo_2026-09-23_14-35-10.jpg" alt="Flowers Shemo" class="w-full h-full object-cover rounded-xl">
                             </div>
                         </div>
                     </div>
@@ -236,10 +192,8 @@
     </section>
 
     <!-- Products Catalog Section -->
-    <section id="products" class="py-16 bg-white">
+    <section id="products" class="py-16 bg-white/95 backdrop-blur-md my-6 mx-4 sm:mx-8 rounded-3xl shadow-lg border border-rosepink-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Title -->
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <span class="text-rosepink-500 font-extrabold text-xs uppercase bg-rosepink-50 px-4 py-1.5 rounded-full border border-rosepink-200 inline-block mb-2">كتالوج المنتجات</span>
                 <h2 class="text-3xl sm:text-4xl font-black text-rosepink-900 font-cairo">اختاري أجمل التحف والورد الكروشيه</h2>
@@ -267,12 +221,11 @@
             <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
                 <!-- Javascript will inject items here -->
             </div>
-
         </div>
     </section>
 
     <!-- Custom Order Section -->
-    <section id="custom-order" class="py-16 soft-pink-bg border-y border-rosepink-200 relative">
+    <section id="custom-order" class="py-16 soft-pink-bg my-6 mx-4 sm:mx-8 rounded-3xl shadow-lg border border-rosepink-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border-2 border-rosepink-200 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
                 <div class="lg:col-span-2 space-y-4 text-right">
@@ -282,7 +235,7 @@
                         نصمم لكِ البوكيه بالألوان والأعداد المقربة لقلبكِ! اختاري نوع الورد (توليب، جوري، عباد شمس، لافندر) مع إضافة اسم أو كرت إهداء خاص للتقديم.
                     </p>
                     <div class="pt-2">
-                        <a href="https://wa.me/966500000000?text=مرحباً%20متجر%20ورد%20وخيط%20🌸%20حاب%20استفسر%20عن%20طلب%20تصميم%20خاص" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-2xl shadow-md transition-all text-sm sm:text-base">
+                        <a href="https://wa.me/966500000000?text=مرحباً%20متجر%20Flowers%20Shemo%20🌸%20حاب%20استفسر%20عن%20طلب%20تصميم%20خاص" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-2xl shadow-md transition-all text-sm sm:text-base">
                             <i class="fa-brands fa-whatsapp text-2xl"></i>
                             <span>توصيل طلبك المباشر عبر الواتساب</span>
                         </a>
@@ -300,10 +253,9 @@
     </section>
 
     <!-- Store Features Section -->
-    <section id="features" class="py-16 bg-white">
+    <section id="features" class="py-16 bg-white/95 backdrop-blur-md my-6 mx-4 sm:mx-8 rounded-3xl shadow-lg border border-rosepink-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
                 <div class="p-6 bg-rosepink-50/60 rounded-3xl border border-rosepink-100 text-center space-y-3">
                     <div class="w-14 h-14 pink-gradient text-white rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
                         <i class="fa-solid fa-heart text-white"></i>
@@ -311,7 +263,6 @@
                     <h3 class="font-bold text-lg text-rosepink-900 font-cairo">خيوط جودة فائقة</h3>
                     <p class="text-xs text-gray-600 leading-relaxed">نستخدم أجود خيوط القطن الناعمة التي تحافظ على رونقها وألوانها الوردية الزاهية.</p>
                 </div>
-
                 <div class="p-6 bg-rosepink-50/60 rounded-3xl border border-rosepink-100 text-center space-y-3">
                     <div class="w-14 h-14 pink-gradient text-white rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
                         <i class="fa-solid fa-truck-fast text-white"></i>
@@ -319,7 +270,6 @@
                     <h3 class="font-bold text-lg text-rosepink-900 font-cairo">توصيل سريع للمملكة 🇸🇦</h3>
                     <p class="text-xs text-gray-600 leading-relaxed">نوصّل لكل مدن المملكة (الرياض، جدة، مكة، الشرقية، وباقي المناطق) بتغليف آمن ومحكم.</p>
                 </div>
-
                 <div class="p-6 bg-rosepink-50/60 rounded-3xl border border-rosepink-100 text-center space-y-3">
                     <div class="w-14 h-14 pink-gradient text-white rounded-2xl flex items-center justify-center text-2xl mx-auto shadow-md">
                         <i class="fa-solid fa-ribbon text-white"></i>
@@ -327,22 +277,20 @@
                     <h3 class="font-bold text-lg text-rosepink-900 font-cairo">تغليف إهداء راقي</h3>
                     <p class="text-xs text-gray-600 leading-relaxed">يصلك البوكيه بتغليف فاخر وجاهز للإهداء مباشرة مع كرت عبارات مجاني.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="py-16 soft-pink-bg">
+    <section id="reviews" class="py-16 soft-pink-bg my-6 mx-4 sm:mx-8 rounded-3xl shadow-lg border border-rosepink-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <span class="text-rosepink-500 font-bold text-xs uppercase">تقييمات المتجر</span>
-                <h2 class="text-3xl font-black text-rosepink-900 font-cairo mt-1">ماذا تقول أميراتنا عن ورد وخيط؟ 💕</h2>
+                <h2 class="text-3xl font-black text-rosepink-900 font-cairo mt-1">ماذا تقول أميراتنا عن Flowers Shemo؟ 💕</h2>
                 <div class="w-16 h-1 pink-gradient mx-auto my-3 rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Review 1 -->
                 <div class="bg-white p-6 rounded-3xl border border-rosepink-200 shadow-sm space-y-3">
                     <div class="flex items-center gap-1 text-amber-400 text-xs">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -356,7 +304,6 @@
                     </div>
                 </div>
 
-                <!-- Review 2 -->
                 <div class="bg-white p-6 rounded-3xl border border-rosepink-200 shadow-sm space-y-3">
                     <div class="flex items-center gap-1 text-amber-400 text-xs">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -370,7 +317,6 @@
                     </div>
                 </div>
 
-                <!-- Review 3 -->
                 <div class="bg-white p-6 rounded-3xl border border-rosepink-200 shadow-sm space-y-3">
                     <div class="flex items-center gap-1 text-amber-400 text-xs">
                         <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -392,7 +338,6 @@
 
     <!-- Slide-in Shopping Cart Sidebar -->
     <aside id="cartDrawer" class="fixed top-0 left-0 h-full w-full sm:w-96 bg-white z-50 shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
-        <!-- Cart Header -->
         <div class="p-5 border-b border-rosepink-100 flex items-center justify-between bg-rosepink-50">
             <div class="flex items-center gap-2 text-rosepink-900">
                 <i class="fa-solid fa-basket-shopping text-rosepink-500 text-xl"></i>
@@ -403,7 +348,6 @@
             </button>
         </div>
 
-        <!-- Free Shipping Progress -->
         <div class="p-3.5 bg-rosepink-100/50 border-b border-rosepink-200 text-xs text-center space-y-1">
             <p id="shippingMessage" class="font-bold text-rosepink-800">أضيفي بقيمة <span id="neededAmount">200</span> ر.س أخرى للحصول على شحن مجاني 🚛</p>
             <div class="w-full bg-white h-2 rounded-full overflow-hidden border border-rosepink-200">
@@ -411,12 +355,8 @@
             </div>
         </div>
 
-        <!-- Cart Items Dynamic Container -->
-        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-4 space-y-4">
-            <!-- Injected via JavaScript -->
-        </div>
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
 
-        <!-- Cart Footer -->
         <div class="p-5 border-t border-rosepink-100 bg-rosepink-50/50 space-y-4">
             <div class="space-y-1 text-xs text-gray-600">
                 <div class="flex justify-between">
@@ -491,7 +431,6 @@
                     <textarea id="custGiftNote" rows="2" class="w-full px-4 py-3 rounded-xl border border-rosepink-200 focus:border-rosepink-500 outline-none text-xs" placeholder="اكتبي العبارة التي تريدين منا طباعتها على كرت الإهداء..."></textarea>
                 </div>
 
-                <!-- Payment Selection -->
                 <div class="space-y-2 pt-2">
                     <label class="block text-xs font-bold text-rosepink-900">طريقة الدفع المفضلّة *</label>
                     <div class="grid grid-cols-2 gap-2 text-xs">
@@ -518,16 +457,15 @@
     <footer class="bg-rosepink-900 text-white py-12 mt-auto">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                
                 <div class="space-y-3">
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-xl bg-white text-rosepink-600 flex items-center justify-center text-xl font-bold">
-                            <i class="fa-solid fa-spa"></i>
+                        <div class="w-10 h-10 rounded-xl overflow-hidden border border-white/30">
+                            <img src="photo_2026-09-23_14-35-10.jpg" alt="Logo" class="w-full h-full object-cover">
                         </div>
-                        <span class="text-xl font-black font-cairo">ورد وخيط 🇸🇦</span>
+                        <span class="text-xl font-black font-cairo">Flowers Shemo 🇸🇦</span>
                     </div>
                     <p class="text-xs text-rosepink-100/80 leading-relaxed">
-                        علامة تجارية سعودية متخصصة بصناعة الورد والديكورات من الخيوط اليدوية. صُنعت بكل حب لتزين مناسباتكم.
+                        علامة تجارية متخصصة بصناعة الورد والديكورات من الخيوط اليدوية. صُنعت بكل حب لتزين مناسباتكم.
                     </p>
                 </div>
 
@@ -558,15 +496,13 @@
                         <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-rosepink-600 transition-all flex items-center justify-center text-sm"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white hover:text-rosepink-600 transition-all flex items-center justify-center text-sm"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
-                    <p class="text-[10px] text-rosepink-300">جميع الحقوق محفوظة &copy; 2026 - متجر ورد وخيط بالسعودية</p>
+                    <p class="text-[10px] text-rosepink-300">جميع الحقوق محفوظة &copy; 2026 - Flowers Shemo</p>
                 </div>
-
             </div>
         </div>
     </footer>
 
     <script>
-        // Store Products Catalog Data (In SAR ر.س)
         const products = [
             {
                 id: 1,
@@ -576,7 +512,6 @@
                 oldPrice: 170,
                 rating: 5,
                 badge: "الأكثر مبيعاً 🔥",
-                icon: "fa-flower-tulip",
                 desc: "بوكيه أزهار توليب خيط بألوان الوردي الفاخر مع تغليف ورقي أنيق وشريط ستان."
             },
             {
@@ -587,7 +522,6 @@
                 oldPrice: null,
                 rating: 5,
                 badge: "جديد 🌸",
-                icon: "fa-basket-shopping",
                 desc: "سلة قش لطيفة محشوة بزاهي الورد الجوري المصنوع يدوياً لطاولات القهوة."
             },
             {
@@ -598,7 +532,6 @@
                 oldPrice: 190,
                 rating: 5,
                 badge: "إضاءة دافئة ✨",
-                icon: "fa-lightbulb",
                 desc: "قبة زجاجية تضم وردة جوري خيط مع شريط إضاءة دافئ لغرفة النوم والمكتب."
             },
             {
@@ -609,7 +542,6 @@
                 oldPrice: 60,
                 rating: 4.9,
                 badge: "للسيارة 🚗",
-                icon: "fa-car",
                 desc: "تعليقة مراية ناعمة جداً تضفي لمسة وردية أنيقة لسيارتك."
             },
             {
@@ -620,7 +552,6 @@
                 oldPrice: 220,
                 rating: 5,
                 badge: "هدايا تخرج 🎓",
-                icon: "fa-graduation-cap",
                 desc: "بوكيه ورد عباد شمس وجوري مع كرت تخرج وقبعة خيط لطيفة."
             },
             {
@@ -631,7 +562,6 @@
                 oldPrice: null,
                 rating: 4.8,
                 badge: "ديكور مكتب 🪴",
-                icon: "fa-seedling",
                 desc: "أغصان لافندر كروشيه موف وردي بحوض سيراميك أبيض لمكتب لطيف."
             },
             {
@@ -642,7 +572,6 @@
                 oldPrice: 280,
                 rating: 5,
                 badge: "توزيعات مناسبات 🎉",
-                icon: "fa-gifts",
                 desc: "12 وردة توليب ملفوفة بتغليف شفاف فردي مناسب للمواليد والحفلات."
             },
             {
@@ -653,16 +582,13 @@
                 oldPrice: null,
                 rating: 4.9,
                 badge: "ديكور جداري 🖼️",
-                icon: "fa-fan",
                 desc: "تعليقة خشبية دائرية مع ورد كروشيه بتصميم بوهيمي هادئ."
             }
         ];
 
-        // Global State Variables
         let cart = [];
         let currentCategory = 'all';
 
-        // DOM Elements
         const productsGrid = document.getElementById('productsGrid');
         const openCartBtn = document.getElementById('openCartBtn');
         const closeCartBtn = document.getElementById('closeCartBtn');
@@ -682,10 +608,8 @@
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileNav = document.getElementById('mobileNav');
 
-        // Render Products Grid
         function renderProducts() {
             productsGrid.innerHTML = '';
-
             const filtered = products.filter(p => currentCategory === 'all' || p.category === currentCategory);
 
             filtered.forEach(p => {
@@ -694,20 +618,9 @@
                 
                 card.innerHTML = `
                     ${p.badge ? `<span class="absolute top-3 right-3 z-10 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-black text-rosepink-600 border border-rosepink-200">${p.badge}</span>` : ''}
-
-                    <!-- SVG Flower Icon / Visual Box -->
                     <div class="aspect-square bg-rosepink-50 rounded-2xl flex items-center justify-center relative overflow-hidden group-hover:scale-102 transition-transform">
-                        <svg class="w-32 h-32 text-rosepink-400" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="18" fill="#EC1367"/>
-                            <circle cx="32" cy="50" r="14" fill="#FF4D91" opacity="0.8"/>
-                            <circle cx="68" cy="50" r="14" fill="#FF4D91" opacity="0.8"/>
-                            <circle cx="50" cy="32" r="14" fill="#FF85B3" opacity="0.8"/>
-                            <circle cx="50" cy="68" r="14" fill="#FF85B3" opacity="0.8"/>
-                            <circle cx="50" cy="50" r="8" fill="#FFE4EC"/>
-                        </svg>
+                        <img src="photo_2026-09-23_14-35-10.jpg" alt="${p.name}" class="w-full h-full object-cover">
                     </div>
-
-                    <!-- Details -->
                     <div class="space-y-2">
                         <div class="flex items-center gap-1 text-amber-400 text-xs">
                             ${'<i class="fa-solid fa-star"></i>'.repeat(Math.floor(p.rating))}
@@ -716,8 +629,6 @@
                         <h3 class="font-bold text-base text-rosepink-900 group-hover:text-rosepink-500 transition-colors font-cairo line-clamp-1">${p.name}</h3>
                         <p class="text-xs text-gray-500 leading-relaxed line-clamp-2">${p.desc}</p>
                     </div>
-
-                    <!-- Price & Actions -->
                     <div class="pt-3 border-t border-rosepink-100 flex items-center justify-between">
                         <div>
                             <div class="flex items-baseline gap-1">
@@ -726,20 +637,16 @@
                             </div>
                             ${p.oldPrice ? `<span class="text-[11px] text-gray-400 line-through">${p.oldPrice} ر.س</span>` : ''}
                         </div>
-
-                        <div class="flex items-center gap-2">
-                            <button onclick="addToCart(${p.id})" class="px-4 py-2.5 pink-gradient text-white rounded-xl font-bold text-xs shadow-md hover:opacity-90 active:scale-95 transition-all flex items-center gap-1.5">
-                                <i class="fa-solid fa-cart-plus"></i>
-                                <span>إضافة</span>
-                            </button>
-                        </div>
+                        <button onclick="addToCart(${p.id})" class="px-4 py-2.5 pink-gradient text-white rounded-xl font-bold text-xs shadow-md hover:opacity-90 active:scale-95 transition-all flex items-center gap-1.5">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>إضافة</span>
+                        </button>
                     </div>
                 `;
                 productsGrid.appendChild(card);
             });
         }
 
-        // Filter Products Category
         function filterCategory(cat) {
             currentCategory = cat;
             document.querySelectorAll('.cat-btn').forEach(btn => {
@@ -750,7 +657,6 @@
             renderProducts();
         }
 
-        // Add to Cart
         function addToCart(id) {
             const product = products.find(p => p.id === id);
             const item = cart.find(i => i.id === id);
@@ -763,11 +669,9 @@
             openCart();
         }
 
-        // Update Cart Drawer UI
         function updateCartUI() {
             const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
             cartBadge.textContent = totalQty;
-
             cartItemsContainer.innerHTML = '';
 
             if (cart.length === 0) {
@@ -785,8 +689,8 @@
                     const el = document.createElement('div');
                     el.className = "flex items-center gap-3 p-3 bg-rosepink-50/60 rounded-2xl border border-rosepink-200/60";
                     el.innerHTML = `
-                        <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-rosepink-500 text-xl font-bold shadow-xs">
-                            🌸
+                        <div class="w-12 h-12 bg-white rounded-xl overflow-hidden shadow-xs">
+                            <img src="photo_2026-09-23_14-35-10.jpg" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1 min-w-0">
                             <h4 class="text-xs font-bold text-rosepink-900 truncate">${item.name}</h4>
@@ -805,7 +709,6 @@
                 });
             }
 
-            // Price Calculations
             const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             const isFreeShipping = subtotal >= 200;
             const shippingFee = (subtotal === 0 || isFreeShipping) ? 0 : 25;
@@ -815,7 +718,6 @@
             shippingFeeText.textContent = isFreeShipping ? "مجاناً 🚚" : `${shippingFee} ر.س`;
             cartTotalPrice.textContent = `${total} ر.س`;
 
-            // Free Shipping Progress
             if (subtotal >= 200) {
                 neededAmount.parentNode.innerHTML = "مبروك! حصلتِ على شحن مجاني لكافة مناطق المملكة 🥳🇸🇦";
                 shippingProgressBar.style.width = "100%";
@@ -851,12 +753,10 @@
             cartOverlay.classList.add('opacity-0', 'pointer-events-none');
         }
 
-        // Drawer Event Listeners
         openCartBtn.addEventListener('click', openCart);
         closeCartBtn.addEventListener('click', closeCart);
         cartOverlay.addEventListener('click', closeCart);
 
-        // Checkout Modal Triggers
         proceedCheckoutBtn.addEventListener('click', () => {
             if (cart.length === 0) {
                 alert('السلة فارغة! يرجى اختيار بعض المنتجات أولاً 💕');
@@ -868,7 +768,6 @@
 
         closeCheckoutBtn.addEventListener('click', () => checkoutModal.classList.add('hidden'));
 
-        // Submit Checkout via WhatsApp Direct Message
         checkoutForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('custName').value;
@@ -882,7 +781,7 @@
             const shipping = subtotal >= 200 ? 0 : 25;
             const total = subtotal + shipping;
 
-            let text = `*طلب جديد من متجر ورد وخيط 🌸🇸🇦*\n\n`;
+            let text = `*طلب جديد من متجر Flowers Shemo 🌸🇸🇦*\n\n`;
             text += `*الاسم:* ${name}\n`;
             text += `*الجوال:* ${phone}\n`;
             text += `*المدينة:* ${city}\n`;
@@ -901,18 +800,15 @@
 
             window.open(`https://wa.me/966500000000?text=${encodeURIComponent(text)}`, '_blank');
 
-            // Reset
             cart = [];
             updateCartUI();
             checkoutModal.classList.add('hidden');
             checkoutForm.reset();
         });
 
-        // Mobile Nav Menu Toggle
         mobileMenuBtn.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
         document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobileNav.classList.add('hidden')));
 
-        // Initialize Store on Load
         document.addEventListener('DOMContentLoaded', () => {
             renderProducts();
             updateCartUI();
