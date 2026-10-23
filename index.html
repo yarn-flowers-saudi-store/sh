@@ -3,58 +3,600 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رسالة</title>
+    <title>Flowers Shemo | متجر الورد والديكورات اليدوية</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body {
-            font-family: 'Tahoma', 'Arial', sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.8;
+        :root {
+            --primary-color: #e84393;
+            --primary-hover: #d63031;
+            --secondary-color: #fd79a8;
+            --bg-color: #fff5f8;
+            --card-bg: #ffffff;
+            --text-color: #2d3436;
+            --text-light: #636e72;
+            --shadow: 0 10px 20px rgba(232, 67, 147, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header & Navbar */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cart-icon-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .cart-icon-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .cart-badge {
+            background: white;
+            color: var(--primary-color);
+            border-radius: 50%;
+            padding: 2px 7px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem 3rem;
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #fd79a8 100%);
+            color: white;
+            border-radius: 0 0 50px 50px;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Container & Categories */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background: white;
+            border: 2px solid var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .category-btn.active, .category-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.2rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .add-to-cart-btn {
+            background: var(--bg-color);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            width: 100%;
+            padding: 0.6rem;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .add-to-cart-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Sliding Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            left: -400px;
+            width: 380px;
+            height: 100%;
+            background: white;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+            z-index: 1001;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.open {
+            left: 0;
+        }
+
+        .cart-header {
+            padding: 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-cart-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 1.5rem;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item-details h4 {
+            font-size: 1rem;
+        }
+
+        .cart-item-details p {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .remove-item-btn {
+            color: var(--primary-hover);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .cart-footer {
+            padding: 1.5rem;
+            border-top: 2px solid var(--bg-color);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .checkout-whatsapp-btn {
+            width: 100%;
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            gap: 10px;
+            transition: var(--transition);
         }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-            max-width: 600px;
+
+        .checkout-whatsapp-btn:hover {
+            background: #1eb857;
+        }
+
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+            display: none;
         }
-        .message-content {
-            white-space: pre-line;
-            font-size: 1.1em;
-            color: #444;
-            margin-bottom: 20px;
+
+        .cart-overlay.active {
+            display: block;
         }
-        .footer {
+
+        /* Footer */
+        footer {
             text-align: center;
-            font-size: 0.9em;
-            color: #777;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
+            padding: 2rem;
+            background: var(--card-bg);
+            color: var(--text-light);
+            margin-top: auto;
+            border-top: 1px solid #ffeaa7;
+        }
+
+        @media (max-width: 480px) {
+            .cart-sidebar {
+                width: 100%;
+                left: -100%;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="message-content">
-السلام عليكم 
-
-مضطر اقولك اني اسف والله جد اسف ادري اني ضريتك كتير كل مره بكلمك وابعد حتى انا والله نفس الشيء تعبت زي ما انت تعبتي 
-
-المهم 
-انا مش مجرد جاي اعتذر منك انا جاي اعرفك حاجه مهمة اخر مره لما قلتلك انسيني جاي اعرفك السبب انا من كام يوم حاسس بشوكه او نخزة في صدري الله العالم بيا و جد او امره احس انه كدا خلاص ممكن يحصلي شي اي ممكن تقولي كنت عرفتني كنت وقفت جنبك بس لا ما ارضى انك تتعبي نفسك عشاني جد كل اللي طالبه منك تسامحيني و الله اسف على كل شيء سويته معك انت احسن حد ف الدنيا ممكن يفهمني بجد وجع رهيب ماني قادر اتحمل حتى اهلي ما عرفتهم ما اريد يتفزعوا عليا بتحمل الى ان ارجع لهم زياره و بكشف هناك بجد سامحيني اذا حصلي شيء لا قدر الله لا تشيلي مني و الله زعلك غالي عندي ترا و الله العظيم انا اكتب الحين و عيوني تبكي بس الحمد لله نشكره دائما وابدا انا راضي بقضاء الله ايا كان ما رضيت ابعتلك على الخاص لان ما ارضى ازعجك اكثر يكفي الضرر اللي سببتلك اياه انا كتبت هنا لعل و عسى يجيي يوم و تفتحي الموقع وتشوفي هذا الكلام بس كدا اهمتي بنفسك و بدراستك اذا كتبلي الله عمر ما بنساك طول حياتي وبتظلي امنية حياتي و هدفي الاول والاخير بالدنيا استودعك الله خلاص هذا اخري ما اقدر اكمل من البكاء
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">
+                <i class="fa-solid font-awesome fa-spa"></i>
+                Flowers Shemo
+            </a>
+            <button class="cart-icon-btn" onclick="toggleCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                السلة
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
         </div>
-        <div class="footer">
-            تم حفظ هذه الرسالة من خلال النظام.
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Flowers Shemo 🌸</h1>
+        <p>أجمل الهدايا والديكورات المصنوعة يدوياً بكل حب لخلق أجمل الذكريات</p>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Categories Filter -->
+        <div class="categories">
+            <button class="category-btn active" onclick="filterProducts('all')">الكل</button>
+            <button class="category-btn" onclick="filterProducts('bouquets')">بوكيهات ورد</button>
+            <button class="category-btn" onclick="filterProducts('yarn')">أشغال خيط</button>
+            <button class="category-btn" onclick="filterProducts('decor')">ديكورات</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be generated dynamically by JavaScript -->
+        </div>
+    </main>
+
+    <!-- Cart Overlay & Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق 🛒</h3>
+            <button class="close-cart-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>الإجمالي:</span>
+                <span id="cartTotal">0 ج.م</span>
+            </div>
+            <button class="checkout-whatsapp-btn" onclick="checkoutWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i>
+                إتمام الطلب عبر الواتساب
+            </button>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 - Flowers Shemo 💕</p>
+    </footer>
+
+    <!-- JavaScript Script -->
+    <script>
+        // رقم الواتساب الذي سيتم استقبال الطلبات عليه (صيغة دولية)
+        const WHATSAPP_NUMBER = "201027033256"; 
+
+        // قائمة المنتجات
+        const products = [
+            {
+                id: 1,
+                name: "بوكيه ورد كروشيه أنيق",
+                category: "yarn",
+                price: 250,
+                image: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500"
+            },
+            {
+                id: 2,
+                name: "بوكيه ورد توليب طبيعي",
+                category: "bouquets",
+                price: 350,
+                image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=500"
+            },
+            {
+                id: 3,
+                name: "فازة ورد مصغرة للمكتب",
+                category: "decor",
+                price: 120,
+                image: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=500"
+            },
+            {
+                id: 4,
+                name: "ديكور حائط خيط هاند ميد",
+                category: "yarn",
+                price: 180,
+                image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500"
+            },
+            {
+                id: 5,
+                name: "بوكيه هدايا مشكل",
+                category: "bouquets",
+                price: 400,
+                image: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=500"
+            }
+        ];
+
+        let cart = [];
+
+        // عرض المنتجات
+        function renderProducts(filter = 'all') {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+
+            const filteredProducts = filter === 'all' 
+                ? products 
+                : products.filter(p => p.category === filter);
+
+            filteredProducts.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-img">
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <div class="product-price">${product.price} ج.م</div>
+                        <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
+                            <i class="fa-solid fa-plus"></i> إضافـة للسـلـة
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // فلترة المنتجات
+        function filterProducts(category) {
+            document.querySelectorAll('.category-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderProducts(category);
+        }
+
+        // إضافة منتج للسلة
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existItem = cart.find(item => item.id === productId);
+
+            if (existItem) {
+                existItem.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            updateCartUI();
+            toggleCart(true); // فتح السلة تلقائياً
+        }
+
+        // حذف منتج من السلة
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+        }
+
+        // تحديث واجهة السلة
+        function updateCartUI() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartBadge = document.getElementById('cartBadge');
+
+            cartItems.innerHTML = '';
+            let total = 0;
+            let totalCount = 0;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p style="text-align:center; color: var(--text-light); margin-top:2rem;">السلة فارغة حالياً 🌸</p>';
+            } else {
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                    totalCount += item.quantity;
+
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'cart-item';
+                    itemElement.innerHTML = `
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <p>${item.price} ج.م × ${item.quantity}</p>
+                        </div>
+                        <button class="remove-item-btn" onclick="removeFromCart(${item.id})">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    `;
+                    cartItems.appendChild(itemElement);
+                });
+            }
+
+            cartTotal.innerText = `${total} ج.م`;
+            cartBadge.innerText = totalCount;
+        }
+
+        // فتح/إغلاق السلة
+        function toggleCart(openState = null) {
+            const sidebar = document.getElementById('cartSidebar');
+            const overlay = document.getElementById('cartOverlay');
+
+            if (openState === true) {
+                sidebar.classList.add('open');
+                overlay.classList.add('active');
+            } else if (openState === false) {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            } else {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('active');
+            }
+        }
+
+        // إرسال الطلب للواتساب
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                alert('السلة فارغة! قم بطلب بعض المنتجات أولاً.');
+                return;
+            }
+
+            let message = "أهلاً Flowers Shemo 🌸\nأود طلب المنتجات التالية:\n\n";
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                message += `${index + 1}. ${item.name} - الكمية: ${item.quantity} (السعر: ${subtotal} ج.م)\n`;
+            });
+
+            message += `\n*الإجمالي:* ${total} ج.م`;
+            message += `\n\nيرجى تأكيد الطلب وتحديد التفاصيل.`;
+
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`, '_blank');
+        }
+
+        // التحميل الأولي
+        renderProducts();
+    </script>
 </body>
 </html>
