@@ -185,7 +185,7 @@
             </div>
 
             <button id="proceedCheckoutBtn" class="w-full py-4 pink-gradient text-white rounded-2xl shadow-lg transition-all text-center flex items-center justify-center gap-2 hover:opacity-95 text-sm">
-                <i class="fa-solid fa-paper-plane text-lg"></i>
+                <i class="fa-solid fa-credit-card text-lg"></i>
                 <span>متابعة إتمام الطلب الشحن والدفع</span>
             </button>
         </div>
@@ -269,10 +269,10 @@
                     </div>
                 </div>
 
-                <!-- زر الإرسال للتليجرام -->
-                <button type="submit" class="w-full py-4 bg-[#24A1DE] hover:bg-[#1d82b3] text-white rounded-xl shadow-lg transition-all text-center flex items-center justify-center gap-2 text-sm">
-                    <i class="fa-brands fa-telegram text-2xl"></i>
-                    <span>إرسال وتأكيد الطلب عبر التليجرام</span>
+                <!-- زر الإرسال عبر الواتساب -->
+                <button type="submit" class="w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl shadow-lg transition-all text-center flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>إرسال وتأكيد الطلب عبر الواتساب</span>
                 </button>
             </form>
         </div>
@@ -565,7 +565,7 @@
 
         closeCheckoutBtn.addEventListener('click', () => checkoutModal.classList.add('hidden'));
 
-        // معالجة إرسال الطلب عبر التليجرام
+        // معالجة إرسال الطلب عبر الواتساب على رقم +201027033256
         checkoutForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('custName').value;
@@ -598,8 +598,8 @@
             text += `\n🚚 *رسوم الشحن:* ${shipping === 0 ? 'مجاني 🚛' : shipping + ' ر.س'}`;
             text += `\n✨ *الإجمالي النهائي:* ${total} ر.س`;
 
-            // توجيه الرسالة لمستلم التليجرام (@ahmed_mohamed_elkholy)
-            window.open(`https://t.me/share/url?url=&text=${encodeURIComponent(text)}`, '_blank');
+            // توجيه لـ WhatsApp مباشرة
+            window.open(`https://wa.me/201027033256?text=${encodeURIComponent(text)}`, '_blank');
 
             cart = [];
             updateCartUI();
