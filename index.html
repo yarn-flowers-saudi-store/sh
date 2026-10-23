@@ -19,13 +19,26 @@
             --transition: all 0.3s ease;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        
+        html, body {
+            height: 100%;
+        }
+
+        body { 
+            background-color: var(--bg-color); 
+            color: var(--text-color); 
+            line-height: 1.6; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
         header { background-color: var(--card-bg); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 1000; }
         
         .navbar { 
             max-width: 1200px; 
             margin: 0 auto; 
-            padding: 0.8rem 1.5rem; 
+            padding: 0.8rem 1.2rem; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -60,33 +73,38 @@
         /* Hero Section */
         .hero { 
             text-align: center; 
-            padding: 6rem 1rem; 
+            padding: 5rem 1rem 4rem; 
             background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
                         url('https://raw.githubusercontent.com/yarn-flowers-saudi-store/sh/main/photo_2026-09-23_14-35-51.jpg');
             background-size: cover;
             background-position: center;
             color: white; 
-            border-radius: 0 0 40px 40px; 
-            margin-bottom: 3rem; 
+            border-radius: 0 0 35px 35px; 
+            margin-bottom: 1.5rem; 
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .hero h1 { 
-            font-size: 3rem; 
-            margin-bottom: 1rem; 
+            font-size: 2.8rem; 
+            margin-bottom: 0.8rem; 
             text-shadow: 2px 2px 6px rgba(0,0,0,0.7); 
             font-family: 'Playfair Display', serif, 'Cairo';
             font-style: italic;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .hero p { 
-            font-size: 1.2rem; 
-            max-width: 600px; 
-            margin: 0 auto 2rem; 
+            font-size: 1.15rem; 
+            max-width: 550px; 
+            margin: 0 auto 1.8rem; 
             opacity: 0.95; 
             text-shadow: 1px 1px 3px rgba(0,0,0,0.7); 
             font-weight: 600;
@@ -95,28 +113,39 @@
         .btn-main { 
             background: var(--primary-color); 
             color: white; 
-            padding: 0.8rem 2.2rem; 
+            padding: 0.75rem 2rem; 
             border-radius: 30px; 
             text-decoration: none; 
             font-weight: 700; 
             box-shadow: var(--shadow); 
             transition: var(--transition); 
             display: inline-block; 
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
         .btn-main:hover { background: var(--primary-hover); transform: translateY(-3px); }
         
-        footer { text-align: center; padding: 2rem; background: var(--card-bg); color: var(--text-light); margin-top: 4rem; border-top: 1px solid #ffeaa7; }
+        footer { 
+            text-align: center; 
+            padding: 1.2rem; 
+            background: var(--card-bg); 
+            color: var(--text-light); 
+            margin-top: 0; 
+            border-top: 1px solid #ffeaa7; 
+            font-size: 0.9rem;
+        }
 
-        /* ضبط الموبايل لمنع تداخل الكلمات */
+        /* تعديلات شاشات الموبايل */
         @media (max-width: 480px) {
-            .navbar { padding: 0.8rem 0.8rem; }
+            .navbar { padding: 0.6rem 0.8rem; }
             .logo { font-size: 1.1rem; gap: 6px; }
             .logo img { width: 34px; height: 34px; }
             .nav-links { gap: 10px; }
             .nav-links a { font-size: 0.85rem; }
-            .hero h1 { font-size: 2.2rem; gap: 6px; }
-            .hero p { font-size: 1rem; }
+            .hero { padding: 3.5rem 1rem 3rem; border-radius: 0 0 25px 25px; margin-bottom: 1rem; }
+            .hero h1 { font-size: 2.1rem; gap: 6px; }
+            .hero p { font-size: 0.95rem; margin-bottom: 1.5rem; }
+            .btn-main { padding: 0.65rem 1.6rem; font-size: 0.95rem; }
+            footer { padding: 1rem; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -135,8 +164,7 @@
     </header>
 
     <section class="hero">
-        <!-- الاسم الجديد في المنتصف -->
-        <h1>🌿 Florê Shaima 🪷</h1>
+        <h1>🪷 Florê Shaima 🌿</h1>
         <p>متجرك الأول للورد والديكورات المصنوعة يدوياً بكل حب لتناسب كل المناسبات الخاصة بك.</p>
         <a href="products.html" class="btn-main">تصفح المنتجات الآن</a>
     </section>
@@ -146,3 +174,4 @@
     </footer>
 </body>
 </html>
+ع
