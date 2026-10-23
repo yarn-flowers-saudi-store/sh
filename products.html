@@ -22,9 +22,9 @@
                             50: '#FFF5F8',
                             100: '#FFE5ED',
                             200: '#FFC2D5',
-                            300: '#FFA2C0', /* لون العناصر الفاتحة */
+                            300: '#FFA2C0',
                             400: '#FF85A8',
-                            500: '#EC1367', /* لون أغمق حبة بسيط للفوتر */
+                            500: '#EC1367',
                             600: '#D20050', 
                             700: '#A8003E',
                             800: '#7E002F',
@@ -132,6 +132,19 @@
             </div>
         </div>
     </section>
+
+    <!-- Image Zoom Modal (نافذة تكبير الصورة) -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 hidden">
+        <div class="relative max-w-3xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl p-4">
+            <button onclick="closeImageModal()" class="absolute top-4 left-4 z-10 w-10 h-10 bg-rosepink-500 text-white rounded-full flex items-center justify-center hover:bg-rosepink-600 shadow-md">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="flex items-center justify-center">
+                <img id="modalImage" src="" alt="صورة المنتج مكبرة" class="max-h-[75vh] w-auto object-contain rounded-2xl">
+            </div>
+            <div id="modalImageCaption" class="text-center mt-4 text-rosepink-900 text-base font-bold"></div>
+        </div>
+    </div>
 
     <!-- Cart Backdrop Overlay -->
     <div id="cartOverlay" class="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
@@ -254,7 +267,7 @@
     </div>
 
     <!-- Footer - لون وردي غامق مشبع وفاخر (#EC1367) متناسق تماماً -->
-    <footer class="bg-[#e75480] text-white py-6 mt-auto text-center text-xs shadow-inner">
+    <footer class="bg-[#EC1367] text-white py-6 mt-auto text-center text-xs shadow-inner">
         <p class="font-bold text-white">جميع الحقوق محفوظة &copy; 2026 - Florê Shaima 🇸🇦</p>
     </footer>
 
@@ -361,6 +374,22 @@
         const checkoutModal = document.getElementById('checkoutModal');
         const closeCheckoutBtn = document.getElementById('closeCheckoutBtn');
         const checkoutForm = document.getElementById('checkoutForm');
+        
+        // دوال فتح وإغلاق نافذة تكبير الصورة
+        function openImageModal(imgSrc, title) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalImageCaption');
+            
+            modalImg.src = imgSrc;
+            modalCaption.textContent = title;
+            modal.classList.remove('hidden');
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+        }
 
         function renderProducts() {
             productsGrid.innerHTML = '';
@@ -372,8 +401,11 @@
                 
                 card.innerHTML = `
                     ${p.badge ? `<span class="absolute top-2 right-2 sm:top-3 sm:right-3 z-10 bg-white/90 backdrop-blur-md px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[9px] sm:text-[11px] text-[#FFA2C0] border border-rosepink-200">${p.badge}</span>` : ''}
-                    <div class="aspect-square bg-rosepink-50 rounded-xl sm:rounded-2xl flex items-center justify-center relative overflow-hidden group-hover:scale-102 transition-transform">
-                        <img src="photo_2026-09-23_14-35-10.jpg" alt="${p.name}" class="w-full h-full object-cover">
+                    <div onclick="openImageModal('${p.image || "photo_2026-09-23_14-35-10.jpg"}', '${p.name}')" class="aspect-square bg-rosepink-50 rounded-xl sm:rounded-2xl flex items-center justify-center relative overflow-hidden group-hover:scale-102 transition-transform cursor-pointer" title="انقر لتكبير الصورة">
+                        <img src="${p.image || "photo_2026-09-23_14-35-10.jpg"}" alt="${p.name}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs gap-1 bg-black/20">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> تكبير
+                        </div>
                     </div>
                     <div class="space-y-1 sm:space-y-2">
                         <div class="flex items-center gap-1 text-amber-400 text-[10px] sm:text-xs">
@@ -443,8 +475,8 @@
                     const el = document.createElement('div');
                     el.className = "flex items-center gap-3 p-3 bg-rosepink-50/60 rounded-2xl border border-rosepink-200/60";
                     el.innerHTML = `
-                        <div class="w-12 h-12 bg-white rounded-xl overflow-hidden shadow-xs">
-                            <img src="photo_2026-09-23_14-35-10.jpg" class="w-full h-full object-cover">
+                        <div class="w-12 h-12 bg-white rounded-xl overflow-hidden shadow-xs cursor-pointer" onclick="openImageModal('${item.image || "photo_2026-09-23_14-35-10.jpg"}', '${item.name}')">
+                            <img src="${item.image || "photo_2026-09-23_14-35-10.jpg"}" class="w-full h-full object-cover">
                         </div>
                         <div class="flex-1 min-w-0">
                             <h4 class="text-xs text-rosepink-900 truncate">${item.name}</h4>
@@ -567,4 +599,3 @@
     </script>
 </body>
 </html>
-
