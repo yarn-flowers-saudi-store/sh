@@ -266,7 +266,7 @@
         </div>
     </div>
 
-    <!-- Footer - لون وردي غامق مشبع وفاخر (#EC1367) متناسق تماماً -->
+    <!-- Footer -->
     <footer class="bg-[#EC1367] text-white py-6 mt-auto text-center text-xs shadow-inner">
         <p class="font-bold text-white">جميع الحقوق محفوظة &copy; 2026 - Florê Shaima 🇸🇦</p>
     </footer>
@@ -375,7 +375,6 @@
         const closeCheckoutBtn = document.getElementById('closeCheckoutBtn');
         const checkoutForm = document.getElementById('checkoutForm');
         
-        // دوال فتح وإغلاق نافذة تكبير الصورة
         function openImageModal(imgSrc, title) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
@@ -584,7 +583,8 @@
             text += `\n*رسوم الشحن:* ${shipping === 0 ? 'مجاني 🚛' : shipping + ' ر.س'}`;
             text += `\n*الإجمالي النهائي:* ${total} ر.س`;
 
-            window.open(`https://wa.me/966500000000?text=${encodeURIComponent(text)}`, '_blank');
+            // التحديث هنا: استخدام رقم الواتساب الخاص بك (+201027033256)
+            window.open(`https://wa.me/201027033256?text=${encodeURIComponent(text)}`, '_blank');
 
             cart = [];
             updateCartUI();
