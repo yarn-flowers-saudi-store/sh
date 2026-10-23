@@ -22,15 +22,56 @@
         body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
         header { background-color: var(--card-bg); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 1000; }
         .navbar { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: 800; color: var(--primary-color); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+        
+        .logo { 
+            font-size: 1.6rem; 
+            font-weight: 800; 
+            color: var(--primary-color); 
+            text-decoration: none; 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+        }
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-color);
+        }
+
         .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 600; transition: var(--transition); }
         .nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
-        .hero { text-align: center; padding: 5rem 1rem; background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #fd79a8 100%); color: white; border-radius: 0 0 50px 50px; margin-bottom: 3rem; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.1); }
-        .hero p { font-size: 1.3rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; }
-        .btn-main { background: white; color: var(--primary-color); padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: 700; box-shadow: var(--shadow); transition: var(--transition); display: inline-block; }
-        .btn-main:hover { background: var(--primary-color); color: white; transform: translateY(-3px); }
+        
+        /* Hero Section with Custom Background Image */
+        .hero { 
+            text-align: center; 
+            padding: 7rem 1rem; 
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://raw.githubusercontent.com/yarn-flowers-saudi-store/sh/main/photo_2026-09-23_14-35-51.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            border-radius: 0 0 50px 50px; 
+            margin-bottom: 3rem; 
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+        .hero p { font-size: 1.3rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.95; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+        
+        .btn-main { 
+            background: var(--primary-color); 
+            color: white; 
+            padding: 0.8rem 2rem; 
+            border-radius: 30px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            box-shadow: var(--shadow); 
+            transition: var(--transition); 
+            display: inline-block; 
+        }
+        .btn-main:hover { background: var(--primary-hover); transform: translateY(-3px); }
+        
         footer { text-align: center; padding: 2rem; background: var(--card-bg); color: var(--text-light); margin-top: 4rem; border-top: 1px solid #ffeaa7; }
     </style>
 </head>
@@ -38,7 +79,8 @@
     <header>
         <div class="navbar">
             <a href="index.html" class="logo">
-                <i class="fa-solid fa-spa"></i> Flowers Shemo
+                <img src="https://raw.githubusercontent.com/yarn-flowers-saudi-store/sh/main/photo_2026-09-23_14-35-10.jpg" alt="Flowers Shemo Logo">
+                Flowers Shemo
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">الرئيسية</a></li>
