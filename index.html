@@ -359,7 +359,7 @@
     <header>
         <div class="navbar">
             <a href="#" class="logo">
-                <i class="fa-solid font-awesome fa-spa"></i>
+                <i class="fa-solid fa-spa"></i>
                 Flowers Shemo
             </a>
             <button class="cart-icon-btn" onclick="toggleCart()">
@@ -405,7 +405,7 @@
         <div class="cart-footer">
             <div class="cart-total">
                 <span>الإجمالي:</span>
-                <span id="cartTotal">0 ج.م</span>
+                <span id="cartTotal">0 ر.س</span>
             </div>
             <button class="checkout-whatsapp-btn" onclick="checkoutWhatsApp()">
                 <i class="fa-brands fa-whatsapp"></i>
@@ -422,43 +422,43 @@
     <!-- JavaScript Script -->
     <script>
         // رقم الواتساب الذي سيتم استقبال الطلبات عليه (صيغة دولية)
-        const WHATSAPP_NUMBER = "201027033256"; 
+        const WHATSAPP_NUMBER = "966500000000"; // يمكنك تعديل الرقم للرقم السعودي الخاص بكم
 
-        // قائمة المنتجات
+        // قائمة المنتجات مع الأسعار بالريال السعودي
         const products = [
             {
                 id: 1,
                 name: "بوكيه ورد كروشيه أنيق",
                 category: "yarn",
-                price: 250,
+                price: 60,
                 image: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500"
             },
             {
                 id: 2,
                 name: "بوكيه ورد توليب طبيعي",
                 category: "bouquets",
-                price: 350,
+                price: 85,
                 image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=500"
             },
             {
                 id: 3,
                 name: "فازة ورد مصغرة للمكتب",
                 category: "decor",
-                price: 120,
+                price: 35,
                 image: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=500"
             },
             {
                 id: 4,
                 name: "ديكور حائط خيط هاند ميد",
                 category: "yarn",
-                price: 180,
+                price: 45,
                 image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500"
             },
             {
                 id: 5,
                 name: "بوكيه هدايا مشكل",
                 category: "bouquets",
-                price: 400,
+                price: 100,
                 image: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=500"
             }
         ];
@@ -481,7 +481,7 @@
                     <img src="${product.image}" alt="${product.name}" class="product-img">
                     <div class="product-info">
                         <h3 class="product-title">${product.name}</h3>
-                        <div class="product-price">${product.price} ج.م</div>
+                        <div class="product-price">${product.price} ر.س</div>
                         <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
                             <i class="fa-solid fa-plus"></i> إضافـة للسـلـة
                         </button>
@@ -541,7 +541,7 @@
                     itemElement.innerHTML = `
                         <div class="cart-item-details">
                             <h4>${item.name}</h4>
-                            <p>${item.price} ج.م × ${item.quantity}</p>
+                            <p>${item.price} ر.س × ${item.quantity}</p>
                         </div>
                         <button class="remove-item-btn" onclick="removeFromCart(${item.id})">
                             <i class="fa-solid fa-trash"></i>
@@ -551,7 +551,7 @@
                 });
             }
 
-            cartTotal.innerText = `${total} ج.م`;
+            cartTotal.innerText = `${total} ر.س`;
             cartBadge.innerText = totalCount;
         }
 
@@ -585,10 +585,10 @@
             cart.forEach((item, index) => {
                 const subtotal = item.price * item.quantity;
                 total += subtotal;
-                message += `${index + 1}. ${item.name} - الكمية: ${item.quantity} (السعر: ${subtotal} ج.م)\n`;
+                message += `${index + 1}. ${item.name} - الكمية: ${item.quantity} (السعر: ${subtotal} ر.س)\n`;
             });
 
-            message += `\n*الإجمالي:* ${total} ج.م`;
+            message += `\n*الإجمالي:* ${total} ر.س`;
             message += `\n\nيرجى تأكيد الطلب وتحديد التفاصيل.`;
 
             const encodedMessage = encodeURIComponent(message);
